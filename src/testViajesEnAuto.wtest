@@ -1,0 +1,14 @@
+import Clientas.*
+import remiseras.*
+import OficinaDeLaCooperativa.*
+
+test "viajes" {
+	oficina.asignarRemiseras(juana, roxana)
+    oficina.remiseraElegidaParaViaje(anaMaria, 10)
+    assert.equals(200, juana.precioViaje(anaMaria,10))
+    oficina.remiseraElegidaParaViaje(teresa, 10)
+    assert.equals(200, juana.precioViaje(teresa,10))
+    oficina.remiseraElegidaParaViaje(teresa, 4)
+	assert.equals(100, juana.precioViaje(teresa,4))
+	assert.that(anaMaria.esEstable())
+}
