@@ -9,6 +9,12 @@ object oficina {
 		remiseraUno = remisera1
 		remiseraDos = remisera2
 	}
+	method choferPrimeraOpcion(){
+                return remiseraUno
+        }
+        method choferSegundaOpcion(){
+                return remiseraDos
+        }
 
 	method cambiarPrimerRemiserarPor(remisera) {
 		remiseraUno = remisera
