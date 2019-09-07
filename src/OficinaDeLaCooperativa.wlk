@@ -24,14 +24,14 @@ object oficina {
 		remiseraDos = remiseraCambiar
 	}
 	
-	method remiseraElegidaParaViaje(cliente, kms) {
-		var condicion = remiseraDos.precioViaje(cliente, kms) < remiseraUno.precioViaje(cliente, kms)
-		var condicion1 = (remiseraDos.precioViaje(cliente, kms) - remiseraUno.precioViaje(cliente, kms))>30
+	method choferElegidoParaViaje(clienta, kms) {
+		var condicion = (remiseraDos.precioViaje(clienta, kms) < remiseraUno.precioViaje(clienta, kms))
+		var condicion1 = ((remiseraUno.precioViaje(clienta, kms) - remiseraDos.precioViaje(clienta, kms))>30)
 		return if (condicion and condicion1) {
-			    remiseraDos
+			       remiseraDos
 		         } else {
-			    remiseraUno
-		}
+			               remiseraUno
+		                }
 	}
 
 }
